@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_margin">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/gender_icon"
+        android:layout_width="@dimen/double_margin"
+        android:layout_height="@dimen/double_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_boy" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/status_icon"
+        android:layout_width="@dimen/lower_margin"
+        android:layout_height="@dimen/lower_margin"
+        android:adjustViewBounds="true"
+        android:src="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/gender_icon"
+        app:layout_constraintEnd_toEndOf="@+id/gender_icon"
+        app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@+id/gender_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User name" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/gender_icon"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        tools:text="Email address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

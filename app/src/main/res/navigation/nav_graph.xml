@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/UserListFragment">
+
+    <fragment
+        android:id="@+id/UserListFragment"
+        android:name="com.tekydevelop.techicaltestsm.user.UserListFragment"
+        android:label="@string/user_list_fragment"
+        tools:layout="@layout/userlist_fragment">
+
+        <action
+            android:id="@+id/action_UserListFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.tekydevelop.techicaltestsm.details.UserDetailsFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_UserListFragment"
+            app:destination="@id/UserListFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/AddUserBottomSheet"
+        android:name="com.tekydevelop.techicaltestsm.add.AddUserBottomSheet"
+        tools:layout="@layout/add_user_bottom_sheet" />
+</navigation>

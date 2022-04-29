@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TechicalTestSM</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="user_list_fragment">Users</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+
+    <string name="add_user">Add User</string>
+    <string name="add">Add</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="gender">Gender</string>
+    <string name="status">Status</string>
+    <string name="delete">delete</string>
+    <string name="cancel">cancel</string>
+
+    <string name="delete_user_title">Delete user</string>
+    <string name="delete_user_message">Are you sure you want to delete user?</string>
+
+    <string name="active">Active</string>
+    <string name="inactive">Inactive</string>
+
+    <!-- Description -->
+    <string name="add_user_description">Add new user action</string>
+
+    <string-array name="genders_string_array">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+</resources>
