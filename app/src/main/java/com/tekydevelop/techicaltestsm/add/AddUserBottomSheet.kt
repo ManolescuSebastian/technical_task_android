@@ -18,7 +18,7 @@ import com.tekydevelop.techicaltestsm.utils.Utils
 import kotlinx.coroutines.flow.collectLatest
 
 
-class AddUserBottomSheet : BottomSheetDialogFragment() {
+class  AddUserBottomSheet : BottomSheetDialogFragment() {
 
     private var _binding: AddUserBottomSheetBinding? = null
     private val binding get() = _binding!!

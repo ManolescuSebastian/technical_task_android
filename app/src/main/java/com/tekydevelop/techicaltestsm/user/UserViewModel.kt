@@ -24,7 +24,11 @@ class UserViewModel @Inject constructor(
     private val _isUserDeleted = MutableStateFlow<Resource<User?>>(Resource(Status.LOADING))
     val isUserDeleted = _isUserDeleted.asSharedFlow()
 
-    fun getUsers() {
+    init {
+        getUsers()
+    }
+
+    private fun getUsers() {
         _userData.value = Resource.loading()
         viewModelScope.launch {
             userUseCase.executeCase().catch {

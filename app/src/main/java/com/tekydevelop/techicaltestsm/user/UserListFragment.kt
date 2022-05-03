@@ -47,13 +47,9 @@ class UserListFragment : Fragment() {
 
         initAdapter()
         initUserRecyclerView()
-        initData()
         initObservers()
     }
 
-    private fun initData() {
-        userViewModel.getUsers()
-    }
 
     private fun initAdapter() {
         userAdapter = UsersAdapter {
@@ -62,6 +58,7 @@ class UserListFragment : Fragment() {
     }
 
     private fun initObservers() {
+
         lifecycleScope.launch {
             userViewModel.userData.collectLatest {
                 when (it.status) {
@@ -76,7 +73,6 @@ class UserListFragment : Fragment() {
                     }
                 }
             }
-            return@launch
         }
 
         lifecycleScope.launchWhenStarted {
