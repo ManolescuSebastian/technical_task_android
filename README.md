@@ -1,3 +1,35 @@
+Application screens
+-----
+<img src="https://github.com/ManolescuSebastian/technical_task_android/blob/master/screenshots/1.jpg" width="30%"></img>
+<img src="https://github.com/ManolescuSebastian/technical_task_android/blob/master/screenshots/2.jpg" width="30%"></img>
+<img src="https://github.com/ManolescuSebastian/technical_task_android/blob/master/screenshots/3.jpg" width="30%"></img>
+
+Project was implemented using the <b>MVVM pattern</b> combined with <b>Clean architecture</b>.       
+
+I have created 3 modules each with it's own role.
+1. App Module - contains the view logic and the main responsability of this model is to provide visual feedback to the user
+2. Domain Module - contains the business logic of the application and acts as a binder between the data module and app module (even if this app is a small app )
+3. Data Module - contains the impementation that provides communication between the server and this application.      
+
+If this was a bigger project with different features, I would have created a module for each feature and in that module the main packages would be:
+- Presentation
+- Domain
+- Data
+
+In this configuration we allow the following dependency
+APP Module can has access to Domain Module and Data Module content
+Domain Module has no access to any of the modules content
+Data Module has access only to domain content
+
+
+<img src="https://uploads.toptal.io/blog/image/127608/toptal-blog-image-1543413671794-80993a19fea97477524763c908b50a7a.png" width="55%"></img>        
+
+The data flow for this application:
+Fragment -> ViewModel -> UseCase -> Repository -> Endpoint
+
+Project requirements
+-----
+
 # Sliide Android developer challenge 
 ## Congratulations, you have reached the next stage which is solving a Sliide practical test.
 We’d like to you to write simple Android application for managing users.
